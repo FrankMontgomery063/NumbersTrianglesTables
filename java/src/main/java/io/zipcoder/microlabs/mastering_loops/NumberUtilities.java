@@ -4,38 +4,75 @@ package io.zipcoder.microlabs.mastering_loops;
 public class NumberUtilities {
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for (int i = start; i < stop; i += step) {
+            result.append((int) Math.pow(i, exponent));
+        }
+        return result.toString();
     }
 
     public static String getRange(int start, int stop, int step) {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for (int i = start; i < stop; i += step) {
+            result.append(i);
+        }
+        return result.toString();
     }
 
     public static String getRange(int start, int stop) {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for (int i = start; i < stop; i++) {
+            result.append(i);
+        }
+        return result.toString();
     }
 
     public static String getRange(int stop) {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < stop; i++) {
+            result.append(i);
+        }
+        return result.toString();
     }
 
     /*
      * natural break
      */
 
-    public static boolean isNumberEven(int toTest) { return false; }
-    public static boolean isNumberOdd(int toTest) { return false; }
+    public static boolean isNumberEven(int toTest) { 
+        return toTest % 2 == 0; 
+    }
+    
+    public static boolean isNumberOdd(int toTest) { 
+        return toTest % 2 != 0; 
+    }
 
     public static String getEvenNumbers(int start, int stop) {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for (int i = start; i < stop; i++) {
+            if (isNumberOdd(i)) {
+                result.append(i);
+            }
+        }
+        return result.toString();
     }
 
     public static String getOddNumbers(int start, int stop) {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for (int i = start; i < stop; i++) {
+            if (isNumberEven(i)) {
+                result.append(i);
+            }
+        }
+        return result.toString();
     }
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for (int i = start; i < stop; i += step) {
+            result.append(i * i);
+        }
+        return result.toString();
     }
 
 }
